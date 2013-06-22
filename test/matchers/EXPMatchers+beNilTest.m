@@ -1,6 +1,6 @@
 #import "TestHelper.h"
 
-@interface EXPMatchers_beNilTest : SenTestCase {
+@interface EXPMatchers_beNilTest : XCTestCase {
   NSObject *nilObject;
   int *nullPointer;
 }

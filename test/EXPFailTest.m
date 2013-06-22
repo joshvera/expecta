@@ -33,7 +33,7 @@
 
 @end
 
-@interface EXPFailTest : SenTestCase
+@interface EXPFailTest : XCTestCase
 @end
 
 @implementation EXPFailTest
@@ -56,12 +56,12 @@
   assertNil(testCase.exception);
   [testCase fail];
   NSException *exception = testCase.exception;
-  assertEqualObjects([exception name], SenTestFailureException);
+  assertEqualObjects([exception name], XCTestFailureException);
   assertEqualObjects([exception reason], @"epic fail");
   NSDictionary *exceptionUserInfo = [exception userInfo];
-  assertEqualObjects([exceptionUserInfo objectForKey:SenTestDescriptionKey], @"epic fail");
-  assertEqualObjects([exceptionUserInfo objectForKey:SenTestFilenameKey], @"test.m");
-  assertEqualObjects([exceptionUserInfo objectForKey:SenTestLineNumberKey], [NSNumber numberWithInt:777]);
+  assertEqualObjects([exceptionUserInfo objectForKey:XCTestDescriptionKey], @"epic fail");
+  assertEqualObjects([exceptionUserInfo objectForKey:XCTestFilenameKey], @"test.m");
+  assertEqualObjects([exceptionUserInfo objectForKey:XCTestLineNumberKey], [NSNumber numberWithInt:777]);
   [testCase release];
 }
 

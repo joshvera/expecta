@@ -1,7 +1,7 @@
 #import "TestHelper.h"
 #import "NSValue+Expecta.h"
 
-@interface NSValue_ExpectaTest : SenTestCase
+@interface NSValue_ExpectaTest : XCTestCase
 @end
 
 @implementation NSValue_ExpectaTest

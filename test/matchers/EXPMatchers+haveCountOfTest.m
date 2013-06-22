@@ -1,6 +1,6 @@
 #import "TestHelper.h"
 
-@interface EXPMatchers_haveCountOfTest : SenTestCase {
+@interface EXPMatchers_haveCountOfTest : XCTestCase {
   NSArray *array;
   NSSet* set;
   NSDictionary* dictionary;

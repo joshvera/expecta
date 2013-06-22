@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #define EXP_SHORTHAND
 #import "Expecta.h"
 #import "FakeTestCase.h"
@@ -7,15 +7,15 @@
 #import "Fixtures.h"
 
 #define assertPass(expr) \
-STAssertNoThrow((expr), nil)
+XCTAssertNoThrow((expr), @"")
 
 #define assertFail(expr, message) \
-STAssertThrowsSpecificNamed((expr), NSException, (message), nil)
+XCTAssertThrowsSpecificNamed((expr), NSException, (message), @"")
 
-#define assertEquals(a, b) STAssertEquals((a), (b), nil)
-#define assertEqualObjects(a, b) STAssertEqualObjects((a), (b), nil)
-#define assertTrue(a) STAssertTrue((a), nil)
-#define assertFalse(a) STAssertFalse((a), nil)
-#define assertNil(a) STAssertNil((a), nil)
+#define assertEquals(a, b) XCTAssertEquals((a), (b), @"")
+#define assertEqualObjects(a, b) XCTAssertEqualObjects((a), (b), @"")
+#define assertTrue(a) XCTAssertTrue((a), @"")
+#define assertFalse(a) XCTAssertFalse((a), @"")
+#define assertNil(a) XCTAssertNil((a), @"")
 
 #define test_expect(a) [expect(a) test]

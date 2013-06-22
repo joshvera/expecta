@@ -1,6 +1,6 @@
 #import "TestHelper.h"
 
-@interface EXPMatchers_beInTheRangeOfTest : SenTestCase
+@interface EXPMatchers_beInTheRangeOfTest : XCTestCase
 @end
 
 @implementation EXPMatchers_beInTheRangeOfTest

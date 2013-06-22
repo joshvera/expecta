@@ -1,6 +1,6 @@
 #import "TestHelper.h"
 
-@interface EXPMatchers_beKindOfTest : SenTestCase {
+@interface EXPMatchers_beKindOfTest : XCTestCase {
   Foo *foo;
   Bar *bar;
   Baz *baz;

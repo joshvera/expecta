@@ -1,6 +1,6 @@
 #import "TestHelper.h"
 
-@interface AsynchronousTestingTest : SenTestCase
+@interface AsynchronousTestingTest : XCTestCase
 @end
 
 @implementation AsynchronousTestingTest
